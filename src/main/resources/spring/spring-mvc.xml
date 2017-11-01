@@ -37,4 +37,12 @@
     		</list>
     	</property>
     </bean>
+    
+    <mvc:interceptors>
+        <!--拦截器顺序执行-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.doordu.inteceptor.AuthInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
